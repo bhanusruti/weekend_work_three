@@ -31,4 +31,6 @@ end
 # The add_a_fridge method
 # The add_a_crib method
 # The add_a_custom_amenity method
+hotel = HotelReservation.new(customer_name: "bob", date: 7, room_number: 201)
+
 

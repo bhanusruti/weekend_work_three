@@ -3,8 +3,19 @@
 # the first string, and false otherwise.
 
 def mutation?(base_word, mutation)
-
+  
+  is_contained = true
+  mutation.split("").each do|letter|
+    if base_word.include?(letter)
+    else
+      is_contained = false 
+      break
+    end
+  end
+  return is_contained
 end
+
+     
 
 # Driver code - don't touch anything below this line.
 puts "TESTING mutation?..."
