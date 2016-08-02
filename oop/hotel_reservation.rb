@@ -33,4 +33,61 @@ end
 # The add_a_custom_amenity method
 hotel = HotelReservation.new(customer_name: "bob", date: 7, room_number: 201)
 
+hotel.room_number = 402
+puts "# The room number is: "
+result = hotel.room_number
+puts result
+
+puts 
+if result == 402
+  puts "pass"
+else
+  puts "fail" 
+end
+
+puts ""
+hotel.add_a_fridge
+result = hotel.amenities
+puts "# The result is " + result[0]
+
+puts
+
+if result[0] == "fridge"
+  puts "pass"
+else
+  puts "fail"
+end
+
+puts ""
+puts "# For The add a crib method"
+hotel.add_a_crib
+result = hotel.amenities
+puts "the result is " + result[1]
+puts ""
+
+ if result[1] == "crib"
+  puts "pass"
+ else
+  puts "fail"
+ end
+
+puts ""
+
+puts "# For The add_a_custom_amenity method:"
+puts ""
+hotel.add_a_custom_amenity("tv")
+result = hotel.amenities
+puts "the result is " + result[2]
+
+ if result[2] == "tv"
+     puts "pass"
+ else
+    puts "fail"
+ end
+
+
+
+
+
+
 
